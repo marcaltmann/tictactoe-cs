@@ -1,0 +1,115 @@
+/*
+ * tictactoe.css
+ * styles
+ */
+
+
+* {
+  margin  : 0;
+  padding : 0;
+}
+
+h1,h2,h3,h4,h5,h6,p { margin-bottom : 10px; }
+
+
+body {
+  margin           : 0 auto;
+  width            : 90%;
+  max-width        : 500px;
+  background-color : #3d3d74;
+  font             : 16px Verdana, Helvetica, Arial, sans-serif;
+  color            : white;
+}
+
+h1 {
+  margin      : 0.5em 0 1em;
+  font-size   : 3em;
+  font-weight : bold;
+  text-shadow : 2px 2px 2px black;
+  text-align  : center;
+}
+
+a {
+  color: yellow;
+}
+  a:hover, a:active {
+    color: orange;
+  }
+
+
+#tictactoe {
+}
+
+#tictactoe-grid {
+  background    : yellow;
+  overflow      : hidden;
+  margin-bottom : 1em;
+}
+
+#tictactoe-grid div {
+  width            : 31.3333333333%;
+  margin           : 0 3% 3% 0;
+  float            : left;
+  background-color : #3d3d74;
+  transition       : all 0.2s;
+}
+  #tictactoe-grid div:hover {
+    cursor           : pointer;
+    background-color : orange;
+  }
+  #tictactoe-grid div.tictactoe-taken {
+    cursor           : auto;
+    background-color : #3d3d74;
+  }
+    #tictactoe-grid div.tictactoe-taken:hover {
+      cursor     : auto;
+    }
+
+div#tictactoe-grid-field2, div#tictactoe-grid-field5, div#tictactoe-grid-field8 {
+  margin-right : 0;
+}
+
+div#tictactoe-grid-field6, div#tictactoe-grid-field7, div#tictactoe-grid-field8 {
+  margin-bottom : 0;
+}
+
+#tictactoe-grid div svg {
+  display    : block;
+  width      : 100%;
+  max-height : 100%;
+}
+
+
+#game-status {
+  margin    : 2em 0 0;
+  font-size : 1em;
+  color     : yellow;
+}
+
+footer {
+  position : absolute;
+  right    : 0.5em;
+  bottom   : 0.5em;
+}
+
+footer a {
+  font-size: 0.8em;
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size : 2.5em;
+    margin    : 0.25em 0 0.5em;
+  }
+}
+
+@media (-moz-touch-enabled) {
+  #tictactoe-grid div:hover {
+    cursor           : auto;
+    background-color : #3d3d74;
+  }
+}
+
